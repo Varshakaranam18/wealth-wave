@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material";
 import { useMemo } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { themeSettings } from "./theme";
