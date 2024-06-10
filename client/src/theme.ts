@@ -45,9 +45,9 @@ export const tokens = {
 };
 
 // Create and export a theme to ensure the types are used
-import { createTheme } from "@mui/material/styles";
 
-const themeSettings = {
+
+export const themeSettings = {
   palette: {
     primary: {
       ...tokens.primary,
@@ -107,6 +107,3 @@ const themeSettings = {
   },
 };
 
-const theme = createTheme(themeSettings);
-
-export default theme;

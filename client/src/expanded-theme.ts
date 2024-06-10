@@ -1,5 +1,5 @@
 // Import the required types from MUI
-import { Palette, PaletteColor } from "@mui/material/styles/createPalette";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 // Declare module augmentation
 declare module "@mui/material/styles/createPalette" {
@@ -13,3 +13,5 @@ declare module "@mui/material/styles/createPalette" {
     tertiary: PaletteColor;
   }
 }
+
+
