@@ -2,7 +2,7 @@ import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery } from "@/state/api";
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import  { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   CartesianGrid,
   Label,
@@ -17,9 +17,7 @@ import {
 import regression, { DataPoint } from "regression";
 
 const Predictions = () => {
-  
-    const theme = useTheme();
-  const { palette } = theme;
+  const { palette } = useTheme();
   const [isPredictions, setIsPredictions] = useState(false);
   const { data: kpiData } = useGetKpisQuery();
 
@@ -49,7 +47,7 @@ const Predictions = () => {
       <FlexBetween m="1rem 2.5rem" gap="1rem">
         <Box>
           <Typography variant="h3">Revenue and Predictions</Typography>
-          <Typography variant="h4">
+          <Typography variant="h6">
             charted revenue and predicted revenue based on a simple linear
             regression model
           </Typography>
@@ -57,7 +55,7 @@ const Predictions = () => {
         <Button
           onClick={() => setIsPredictions(!isPredictions)}
           sx={{
-            color: "whitesmoke",
+            color: palette.grey[900],
             backgroundColor: palette.grey[700],
             boxShadow: "0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4)",
           }}
