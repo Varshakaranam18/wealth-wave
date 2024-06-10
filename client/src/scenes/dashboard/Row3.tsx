@@ -12,7 +12,8 @@ import { useMemo } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
-  const { palette } = useTheme();
+  const theme = useTheme();
+  const { palette } = theme;
   const pieColors = [palette.primary[800], palette.primary[500]];
 
   const { data: kpiData } = useGetKpisQuery();

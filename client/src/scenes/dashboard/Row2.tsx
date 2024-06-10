@@ -26,7 +26,8 @@ const pieData = [
 ];
 
 const Row2 = () => {
-  const { palette } = useTheme();
+  const theme = useTheme();
+  const { palette } = theme;
   const pieColors = [palette.primary[800], palette.primary[300]];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();

@@ -17,7 +17,9 @@ import {
 import regression, { DataPoint } from "regression";
 
 const Predictions = () => {
-  const { palette } = useTheme();
+  
+    const theme = useTheme();
+  const { palette } = theme;
   const [isPredictions, setIsPredictions] = useState(false);
   const { data: kpiData } = useGetKpisQuery();
 

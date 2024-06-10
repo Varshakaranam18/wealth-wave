@@ -19,7 +19,9 @@ import {
 } from "recharts";
 
 const Row1 = () => {
-  const { palette } = useTheme();
+  const theme = useTheme();
+  const { palette } = theme;
+  
   const { data } = useGetKpisQuery();
 
   const revenue = useMemo(() => {
