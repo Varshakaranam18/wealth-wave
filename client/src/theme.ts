@@ -11,28 +11,28 @@ export const tokens = {
     900: "#242427",
   },
   primary: {
-    // purple
-    100: "#f3e6ff",
-    200: "#e6ccff",
-    300: "#d9b3ff",
-    400: "#cc99ff",
-    500: "#bf80ff",
-    600: "#9966cc",
-    700: "#734d99",
-    800: "#4d3366",
-    900: "#261a33",
+    // light green
+    100: "#d0fcf4",
+    200: "#a0f9e9",
+    300: "#71f5de",
+    400: "#41f2d3",
+    500: "#12efc8",
+    600: "#0ebfa0",
+    700: "#0b8f78",
+    800: "#076050",
+    900: "#043028",
   },
   secondary: {
-    // white
-    100: "#ffffff",
-    200: "#f2f2f2",
-    300: "#e6e6e6",
-    400: "#d9d9d9",
-    500: "#cccccc",
-    600: "#b3b3b3",
-    700: "#999999",
-    800: "#808080",
-    900: "#666666",
+    // yellow
+    100: "#fcf0dd",
+    200: "#fae1bb",
+    300: "#f7d299",
+    400: "#f5c377",
+    500: "#f2b455",
+    600: "#c29044",
+    700: "#916c33",
+    800: "#614822",
+    900: "#302411",
   },
   tertiary: {
     // purple
@@ -44,9 +44,7 @@ export const tokens = {
   },
 };
 
-// Create and export a theme to ensure the types are used
-
-
+// mui theme settings
 export const themeSettings = {
   palette: {
     primary: {
@@ -56,7 +54,7 @@ export const themeSettings = {
     },
     secondary: {
       ...tokens.secondary,
-      main: tokens.secondary[100],
+      main: tokens.secondary[500],
     },
     tertiary: {
       ...tokens.tertiary,
@@ -106,4 +104,3 @@ export const themeSettings = {
     },
   },
 };
-
