@@ -1,4 +1,4 @@
-import { useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material";
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery } from "@/state/api";
@@ -186,7 +186,7 @@ const Row1 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="profit"
-              stroke={palette.tertiary[500]}
+              stroke={palette.secondary.main}
             />
             <Line
               yAxisId="right"

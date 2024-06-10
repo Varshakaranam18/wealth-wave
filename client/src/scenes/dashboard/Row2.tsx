@@ -3,7 +3,7 @@ import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import {
   Tooltip,
   CartesianGrid,
@@ -26,8 +26,9 @@ const pieData = [
 ];
 
 const Row2 = () => {
-  const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const theme = useTheme();
+  const { palette } = theme;
+  const pieColors = [palette.primary.main, "#c2c5ce"];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
 
@@ -76,7 +77,7 @@ const Row2 = () => {
               bottom: 55,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke="#A9A9A9" />
             <XAxis
               dataKey="name"
               tickLine={false}
@@ -101,7 +102,7 @@ const Row2 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="Non Operational Expenses"
-              stroke={palette.tertiary[500]}
+              stroke="#8884d8"
             />
             <Line
               yAxisId="right"
@@ -133,14 +134,14 @@ const Row2 = () => {
               paddingAngle={2}
               dataKey="value"
             >
-              {pieData.map((entry, index) => (
+              {pieData.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={pieColors[index]} />
               ))}
             </Pie>
           </PieChart>
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
             <Typography variant="h5">Target Sales</Typography>
-            <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
+            <Typography m="0.3rem 0" variant="h3" color={palette.primary.main}>
               83
             </Typography>
             <Typography variant="h6">
@@ -170,7 +171,7 @@ const Row2 = () => {
               left: -10,
             }}
           >
-            <CartesianGrid stroke={palette.grey[800]} />
+            <CartesianGrid stroke="#A9A9A9"/>
             <XAxis
               type="number"
               dataKey="price"
@@ -194,7 +195,7 @@ const Row2 = () => {
             <Scatter
               name="Product Expense Ratio"
               data={productExpenseData}
-              fill={palette.tertiary[500]}
+              fill={palette.primary.main}
             />
           </ScatterChart>
         </ResponsiveContainer>

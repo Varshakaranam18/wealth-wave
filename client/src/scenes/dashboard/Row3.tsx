@@ -12,8 +12,9 @@ import React, { useMemo } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
-  const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[500]];
+  const theme = useTheme();
+  const { palette } = theme;
+  const pieColors = [palette.primary.main, "#c2c5ce"];
 
   const { data: kpiData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
@@ -98,14 +99,14 @@ const Row3 = () => {
           height="75%"
           sx={{
             "& .MuiDataGrid-root": {
-              color: palette.grey[300],
+              color: "#A9A9A9",
               border: "none",
             },
             "& .MuiDataGrid-cell": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid #A9A9A9 !important`,
             },
             "& .MuiDataGrid-columnHeaders": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid #A9A9A9 !important`,
             },
             "& .MuiDataGrid-columnSeparator": {
               visibility: "hidden",
@@ -132,14 +133,14 @@ const Row3 = () => {
           height="80%"
           sx={{
             "& .MuiDataGrid-root": {
-              color: palette.grey[300],
+              color: "#A9A9A9",
               border: "none",
             },
             "& .MuiDataGrid-cell": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid #A9A9A9 !important`,
             },
             "& .MuiDataGrid-columnHeaders": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
+              borderBottom: `1px solid #A9A9A9 !important`,
             },
             "& .MuiDataGrid-columnSeparator": {
               visibility: "hidden",
@@ -187,12 +188,12 @@ const Row3 = () => {
         <Box
           height="15px"
           margin="1.25rem 1rem 0.4rem 1rem"
-          bgcolor={palette.primary[800]}
+          bgcolor={palette.primary.main}
           borderRadius="1rem"
         >
           <Box
             height="15px"
-            bgcolor={palette.primary[600]}
+            bgcolor={palette.primary.main}
             borderRadius="1rem"
             width="40%"
           ></Box>
